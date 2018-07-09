@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light navbar-expand-sm">
+        <a class="navbar-brand" href="/" id="website-name">Hateful8th</a>
+
+        <div class="navbar-nav ml-auto d-sm-none">
+            <a class="nav-item nav-link" href="/about.html">About</a>
+            <!-- Display on small displays and below -->
+        </div>
+
+        <div class="navbar-nav mr-auto d-none d-sm-block">
+            <a class="nav-item nav-link" href="/about.html">About</a>
+            <!-- Display on medium displays and above -->
+        </div>
+
+        <div class="d-none d-sm-block navbar-text" id="website-tagline">[Formerly] Real time '8th debate' analysis on Twitter</div>
+    </nav>
+    <div id="loading-bar" class="loader-placeholder loader-bar"></div>
+
+    <div class="container">
+        <div class="card col-12 mt-4 mb-4">
+            <div id="sentiment-graph-box">
+                <canvas id="sentiment-graph"></canvas>
+            </div>
+            <p class="text-center">Changes in mood expressed by each viewpoint over the course of the debate</p>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="wordcloud" id="repeal-cloud"></div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="wordcloud" id="save-cloud"></div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center">Currently trending topics in each viewpoint's discussions</p>
+        </div>
+    </div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wordcloud2.js/1.0.6/wordcloud2.js"></script>
+
+<script src="config.js"></script>
+<script src="lineChart.js"></script>
+<script src="sentiCloud.js"></script>
+<script src="main.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-76747450-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-76747450-2');
+</script>
+
+</html>
