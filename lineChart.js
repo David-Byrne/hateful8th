@@ -4,7 +4,7 @@
 
 class LineChart { // eslint-disable-line no-unused-vars
     constructor(canvas, topic1, topic2) {
-        const defaultLen = Math.ceil((new Date() - new Date(2017, 10, 8)) / (24 * 60 * 60 * 1000));
+        const defaultLen = 209;
         // defaultLen is roughly how many days of data we'll be displaying, since the animation
         // works best if we've about the same amount of place holder and real data.
 
